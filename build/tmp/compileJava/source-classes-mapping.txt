@@ -1,2 +1,4 @@
-com/tianquan/WebGoogleApi/HelloServlet.java
- com.tianquan.WebGoogleApi.HelloServlet
+com/tianquan/WebGoogleApi/utility/GDriveCredentials.java
+ com.tianquan.WebGoogleApi.utility.GDriveCredentials
+com/tianquan/WebGoogleApi/servlet/HelloServlet.java
+ com.tianquan.WebGoogleApi.servlet.HelloServlet
