@@ -3,8 +3,17 @@ plugins {
     id 'war'
 }
 
+apply plugin: 'java'
+apply plugin: 'application'
+
+
 group 'com.tianquan'
 version '1.0-SNAPSHOT'
+
+mainClassName = 'com.tinquan.WebGoogleApi.utility.GDriveCredentials'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+version = '1.0'
 
 repositories {
     mavenCentral()
@@ -14,16 +23,34 @@ ext {
     junitVersion = '5.7.0'
 }
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 dependencies {
     compileOnly('javax.servlet:javax.servlet-api:4.0.1')
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+    compile 'com.google.api-client:google-api-client:1.23.0'
+    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    compile 'com.google.apis:google-api-services-drive:v3-rev110-1.23.0'
 }
 
 test {
     useJUnitPlatform()
 }
+//
+//apply plugin: 'java'
+//apply plugin: 'application'
+//
+//mainClassName = 'com.tinquan.WebGoogleApi.utility.GDriveCredentials'
+//sourceCompatibility = 1.8
+//targetCompatibility = 1.8
+//version = '1.0'
+//
+//repositories {
+//    mavenCentral()
+//}
+//
+//dependencies {
+//    compile 'com.google.api-client:google-api-client:1.23.0'
+//    compile 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+//    compile 'com.google.apis:google-api-services-drive:v3-rev110-1.23.0'
+//}
